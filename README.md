@@ -12,10 +12,10 @@ A professional-grade computer vision pipeline that analyzes classical artworks t
 * **Smart Data Pipeline:** Utilizes a custom PyTorch `Dataset` with `TrivialAugmentWide` for robust, art-friendly data augmentation.
 * **Mathematical Inference Metrics:** Beyond simple predictions, the inference script calculates:
   🎯 PREDICTION RESULTS
-*Top Confidence: 0.8942 (89.42%)
-*Mean Score:     -0.0124
-*Mean Deviation: 0.9452
-*Entropy Loss:   0.4120
+* Top Confidence: 0.8942 (89.42%).
+* Mean Score:     -0.0124.
+* Mean Deviation: 0.9452.
+* Entropy Loss:   0.4120.
 * **Production-Ready Structure:** Modular code design separating data loading, model architecture, training, and inference.
 
 ## 📊 The Dataset

@@ -19,9 +19,7 @@ A professional-grade computer vision pipeline that analyzes classical artworks t
 This project uses the [Rijksmuseum Dataset](https://www.kaggle.com/datasets/lgmoneda/rijksmuseum) from Kaggle. It contains digitized, high-resolution heritage artworks from the Dutch National Museum.
 * **Imbalanced Data Handling:** The training loop utilizes `CrossEntropyLoss` with `label_smoothing=0.1` to prevent overconfidence on majority classes (like anonymous prints).
 
-## 🚀 Getting Started
-
-### 1. Prerequisites
+### Prerequisites
 Ensure you have Python 3.8+ and the following libraries installed:
 ```bash
 pip install torch torchvision pandas scikit-learn pillow matplotlib tqdm kaggle

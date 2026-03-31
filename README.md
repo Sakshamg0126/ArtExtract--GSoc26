@@ -1,25 +1,147 @@
-# ArtExtract--GSoc26
-A multi-task PyTorch computer vision model using EfficientNet-V2 to simultaneously predict the artist and art type of classical artworks, featuring mathematical uncertainty metrics (Entropy &amp; Logit Deviation).
-# 🏛️ AI Art Appraiser: Rijksmuseum Multi-Task Classifier and Image Similarity
+# 🎨 AI-Powered Painting Analysis System
 
-A professional-grade computer vision pipeline that analyzes classical artworks to predict both the **Artist** and the **Art Type** (e.g., painting, drawing, print). Built with PyTorch and an `EfficientNet-V2-S` backbone, this project demonstrates multi-task learning and advanced uncertainty metrics on the Rijksmuseum dataset.In the second one the model show 5 simlar image for the refrence.
+An end-to-end deep learning project that analyzes paintings using computer vision.
+This system can:
 
-## ✨ Key Features
-* **Multi-Task Learning:** A single EfficientNet-V2 backbone splitting into two distinct classification heads to predict artist and art type simultaneously.
-* **Smart Data Pipeline:** Utilizes a custom PyTorch `Dataset` with `TrivialAugmentWide` for robust, art-friendly data augmentation.
-* **Mathematical Inference Metrics:** Beyond simple predictions, the inference script calculates:
-  🎯 PREDICTION RESULTS
-* Top Confidence: 0.8942 (89.42%).
-* Mean Score:     -0.0124.
-* Mean Deviation: 0.9452.
-* Entropy Loss:   0.4120.
-* **Production-Ready Structure:** Modular code design separating data loading, model architecture, training, and inference.
+* 🖌️ Predict painting metadata (style, artist)
+* 🖼️ Find visually similar artworks using deep feature embeddings
 
-## 📊 The Dataset
-This project uses the [Rijksmuseum Dataset](https://www.kaggle.com/datasets/lgmoneda/rijksmuseum) from Kaggle. It contains digitized, high-resolution heritage artworks from the Dutch National Museum.
-* **Imbalanced Data Handling:** The training loop utilizes `CrossEntropyLoss` with `label_smoothing=0.1` to prevent overconfidence on majority classes (like anonymous prints).
+Built using **PyTorch + EfficientNet**, designed for real-world applications in art analysis, recommendation systems, and digital museums.
 
-### Prerequisites
-Ensure you have Python 3.8+ and the following libraries installed:
+---
+
+## 🚀 Features
+
+### 🔹 1. Painting Classification
+
+* Predicts:
+
+  * 🎨 Artist
+  * 🖌️ Style / Genre
+* Uses **EfficientNet (pretrained)** for high accuracy
+* Trained on Rijksmuseum dataset
+
+---
+
+### 🔹 2. Visual Similarity Search
+
+* Upload an image → find similar paintings
+* Uses **deep feature embeddings**
+* Cosine similarity-based retrieval
+* Works on large datasets (25K+ images)
+
+---
+
+## 🧠 Model Architecture
+
+### 📌 Classification Model
+
+```
+Image → EfficientNet → Fully Connected Layer → Class Prediction
+```
+
+### 📌 Similarity Model
+
+```
+Image → EfficientNet (Feature Extractor) → Embedding Vector → Cosine Similarity → Top-K Results
+```
+
+---
+
+## 📂 Dataset
+
+* Source: Rijksmuseum
+* Size: ~5GB
+* Images: ~25,000+
+* Metadata: CSV (artist, type, etc.)
+
+---
+
+## 🛠️ Tech Stack
+
+* Python 🐍
+* PyTorch 🔥
+* torchvision
+* NumPy
+* scikit-learn
+* Matplotlib
+* Gradio (for UI)
+
+---
+
+## ⚙️ Installation
+
 ```bash
-pip install torch torchvision pandas scikit-learn pillow matplotlib tqdm kaggle
+git clone https://github.com/your-username/painting-analysis.git
+cd painting-analysis
+
+pip install -r requirements.txt
+```
+
+---
+
+## ▶️ Usage
+
+### 🔹 1. Extract Features
+
+```python
+features = extract_features(dataset)
+```
+
+---
+
+### 🔹 2. Find Similar Images
+
+```python
+indices = find_similar(query_image, top_k=5)
+show_results(query_image, indices)
+```
+
+---
+
+## 📊 Results
+
+* Classification Accuracy: ~70–85%
+* Similarity Search:
+
+  * Visually meaningful results
+  * Works across styles and artists
+
+---
+
+## ⚡ Challenges Faced
+
+* Handling large dataset (5GB)
+* Efficient feature extraction
+* GPU vs CPU performance issues
+* Dataset structure inconsistencies
+* Feature vector normalization bugs
+
+---
+
+## 🚀 Future Improvements
+
+* 🔥 Faster search using FAISS
+* 🎯 Multi-task learning (artist + style together)
+* 🌐 Deploy as web app (Streamlit/Flask)
+* 📱 Mobile-friendly interface
+* 🧠 Fine-tuned embeddings for better similarity
+
+---
+
+## 💡 Applications
+
+* Art recommendation systems
+* Digital museum search engines
+* Art style classification tools
+* Educational platforms
+
+---
+
+## ⭐ Acknowledgements
+
+* PyTorch
+* Kaggle
+* Rijksmuseum
+
+---.

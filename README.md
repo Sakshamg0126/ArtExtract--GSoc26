@@ -112,7 +112,7 @@ gr.Interface(fn=search_ui, inputs="image", outputs="gallery").launch()
 ## 📊 Results
 
 * Classification Accuracy: ~70–85%
-* Similarity Search:(https://20b9711de160de2298.gradio.live/)
+* Similarity Search:[Results](https://20b9711de160de2298.gradio.live/)
 
   * Visually meaningful results
   * Works across styles and artists

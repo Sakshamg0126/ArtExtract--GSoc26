@@ -1,8 +1,8 @@
 # ArtExtract--GSoc26
 A multi-task PyTorch computer vision model using EfficientNet-V2 to simultaneously predict the artist and art type of classical artworks, featuring mathematical uncertainty metrics (Entropy &amp; Logit Deviation).
-# 🏛️ AI Art Appraiser: Rijksmuseum Multi-Task Classifier
+# 🏛️ AI Art Appraiser: Rijksmuseum Multi-Task Classifier and Image Similarity
 
-A professional-grade computer vision pipeline that analyzes classical artworks to predict both the **Artist** and the **Art Type** (e.g., painting, drawing, print). Built with PyTorch and an `EfficientNet-V2-S` backbone, this project demonstrates multi-task learning and advanced uncertainty metrics on the Rijksmuseum dataset.
+A professional-grade computer vision pipeline that analyzes classical artworks to predict both the **Artist** and the **Art Type** (e.g., painting, drawing, print). Built with PyTorch and an `EfficientNet-V2-S` backbone, this project demonstrates multi-task learning and advanced uncertainty metrics on the Rijksmuseum dataset.In the second one the model show 5 simlar image for the refrence.
 
 ## ✨ Key Features
 * **Multi-Task Learning:** A single EfficientNet-V2 backbone splitting into two distinct classification heads to predict artist and art type simultaneously.

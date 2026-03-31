@@ -65,6 +65,7 @@ Image → EfficientNet (Feature Extractor) → Embedding Vector → Cosine Simil
 * NumPy
 * scikit-learn
 * Matplotlib
+* Gradio (for UI)
 
 ---
 
@@ -98,10 +99,20 @@ show_results(query_image, indices)
 
 ---
 
+### 🔹 3. Run Web App (Optional)
+
+```python
+import gradio as gr
+
+gr.Interface(fn=search_ui, inputs="image", outputs="gallery").launch()
+```
+
+---
+
 ## 📊 Results
 
 * Classification Accuracy: ~70–85%
-* Similarity Search:
+* Similarity Search:(https://20b9711de160de2298.gradio.live/)
 
   * Visually meaningful results
   * Works across styles and artists
@@ -137,9 +148,21 @@ show_results(query_image, indices)
 
 ---
 
+## 👨‍💻 Author
+
+**Saksham Gurrap**
+B.Tech AI & Data Science
+
+---
+
 ## ⭐ Acknowledgements
 
 * PyTorch
 * Kaggle
 * Rijksmuseum
 
+---
+
+## 📌 License
+
+This project is for educational and research purposes.

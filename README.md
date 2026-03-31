@@ -65,7 +65,6 @@ Image → EfficientNet (Feature Extractor) → Embedding Vector → Cosine Simil
 * NumPy
 * scikit-learn
 * Matplotlib
-* Gradio (for UI)
 
 ---
 

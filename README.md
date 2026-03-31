@@ -143,4 +143,3 @@ show_results(query_image, indices)
 * Kaggle
 * Rijksmuseum
 
----.
